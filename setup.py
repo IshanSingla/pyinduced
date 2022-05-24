@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup
 
+def readme():
+	try:
+		with open('README.rst') as f:
+			return f.read()
+	except:
+		pass
+	
 setup(name='pyinduced',
 	version='1.0.0',
 	classifiers=[
@@ -18,7 +25,7 @@ setup(name='pyinduced',
 	],
 	keywords='induced encription decription helper',
 	description='induced encription decription helper',
-	long_description=" induced encription decription helper",
+	long_description=readme(),
 	url='https://github.com/IshanSingla/pyinduced',
 	author='Ishan Singla',
 	author_email='inducedofficial@gmail.com',
